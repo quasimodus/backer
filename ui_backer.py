@@ -14,14 +14,16 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Dialog(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
-        Dialog.resize(632, 432)
+        Dialog.resize(445, 262)
         Dialog.setStyleSheet("QDialog {\n"
-"    background-color: #303030;\n"
+"    background-color: #3b3b3b;\n"
 "    color: #ffffff;\n"
+"    border: 1px outset;\n"
+"    \n"
 "}")
-        self.pushButton = QtWidgets.QPushButton(Dialog)
-        self.pushButton.setGeometry(QtCore.QRect(20, 340, 75, 75))
-        self.pushButton.setStyleSheet("QPushButton {\n"
+        self.pushButton_1 = QtWidgets.QPushButton(Dialog)
+        self.pushButton_1.setGeometry(QtCore.QRect(20, 140, 75, 75))
+        self.pushButton_1.setStyleSheet("QPushButton {\n"
 "   background-color: #a04dff;\n"
 "    color: #ffffff;\n"
 "   \n"
@@ -32,9 +34,9 @@ class Ui_Dialog(object):
 "   }\n"
 "\n"
 "")
-        self.pushButton.setObjectName("pushButton")
+        self.pushButton_1.setObjectName("pushButton_1")
         self.pushButton_2 = QtWidgets.QPushButton(Dialog)
-        self.pushButton_2.setGeometry(QtCore.QRect(110, 340, 75, 75))
+        self.pushButton_2.setGeometry(QtCore.QRect(110, 140, 75, 75))
         self.pushButton_2.setStyleSheet("QPushButton {\n"
 "    background-color: #ff4f11;\n"
 "    color: #ffffff;\n"
@@ -46,34 +48,19 @@ class Ui_Dialog(object):
 "    color: #ffffff;\n"
 "    }")
         self.pushButton_2.setObjectName("pushButton_2")
-        self.toolButton = QtWidgets.QToolButton(Dialog)
-        self.toolButton.setGeometry(QtCore.QRect(20, 20, 25, 19))
-        self.toolButton.setObjectName("toolButton")
-        self.toolButton_2 = QtWidgets.QToolButton(Dialog)
-        self.toolButton_2.setGeometry(QtCore.QRect(20, 50, 25, 19))
-        self.toolButton_2.setObjectName("toolButton_2")
-        self.toolButton_3 = QtWidgets.QToolButton(Dialog)
-        self.toolButton_3.setGeometry(QtCore.QRect(20, 80, 25, 19))
-        self.toolButton_3.setObjectName("toolButton_3")
-        self.lineEdit = QtWidgets.QLineEdit(Dialog)
-        self.lineEdit.setGeometry(QtCore.QRect(60, 20, 341, 21))
-        self.lineEdit.setStyleSheet("QLineEdit {\n"
+        self.toolButton_1 = QtWidgets.QToolButton(Dialog)
+        self.toolButton_1.setGeometry(QtCore.QRect(20, 20, 25, 19))
+        self.toolButton_1.setObjectName("toolButton_1")
+        self.lineEdit_1 = QtWidgets.QLineEdit(Dialog)
+        self.lineEdit_1.setGeometry(QtCore.QRect(60, 20, 341, 21))
+        self.lineEdit_1.setStyleSheet("QLineEdit {\n"
 "    background-color: #5c5b5b;\n"
 "    color: #ffffff;\n"
 "}")
-        self.lineEdit.setObjectName("lineEdit")
-        self.calendarWidget = QtWidgets.QCalendarWidget(Dialog)
-        self.calendarWidget.setGeometry(QtCore.QRect(300, 230, 312, 183))
-        self.calendarWidget.setObjectName("calendarWidget")
-        self.toolButton_4 = QtWidgets.QToolButton(Dialog)
-        self.toolButton_4.setGeometry(QtCore.QRect(20, 110, 25, 19))
-        self.toolButton_4.setObjectName("toolButton_4")
-        self.toolButton_5 = QtWidgets.QToolButton(Dialog)
-        self.toolButton_5.setGeometry(QtCore.QRect(20, 140, 25, 19))
-        self.toolButton_5.setObjectName("toolButton_5")
-        self.toolButton_6 = QtWidgets.QToolButton(Dialog)
-        self.toolButton_6.setGeometry(QtCore.QRect(20, 170, 25, 19))
-        self.toolButton_6.setObjectName("toolButton_6")
+        self.lineEdit_1.setObjectName("lineEdit_1")
+        self.toolButton_2 = QtWidgets.QToolButton(Dialog)
+        self.toolButton_2.setGeometry(QtCore.QRect(20, 50, 25, 19))
+        self.toolButton_2.setObjectName("toolButton_2")
         self.lineEdit_2 = QtWidgets.QLineEdit(Dialog)
         self.lineEdit_2.setGeometry(QtCore.QRect(60, 50, 341, 21))
         self.lineEdit_2.setStyleSheet("QLineEdit {\n"
@@ -81,103 +68,29 @@ class Ui_Dialog(object):
 "    color: #ffffff;\n"
 "}")
         self.lineEdit_2.setObjectName("lineEdit_2")
-        self.lineEdit_3 = QtWidgets.QLineEdit(Dialog)
-        self.lineEdit_3.setGeometry(QtCore.QRect(60, 80, 341, 21))
-        self.lineEdit_3.setStyleSheet("QLineEdit {\n"
-"    background-color: #5c5b5b;\n"
-"    color: #ffffff;\n"
+        self.progressBar = QtWidgets.QProgressBar(Dialog)
+        self.progressBar.setGeometry(QtCore.QRect(20, 80, 415, 23))
+        self.progressBar.setStyleSheet("QProgressBar {\n"
+"    \n"
+"     color: #ffffff;\n"
 "}")
-        self.lineEdit_3.setObjectName("lineEdit_3")
-        self.lineEdit_4 = QtWidgets.QLineEdit(Dialog)
-        self.lineEdit_4.setGeometry(QtCore.QRect(60, 110, 341, 21))
-        self.lineEdit_4.setStyleSheet("QLineEdit {\n"
-"    background-color: #5c5b5b;\n"
-"    color: #ffffff;\n"
-"}")
-        self.lineEdit_4.setObjectName("lineEdit_4")
-        self.lineEdit_5 = QtWidgets.QLineEdit(Dialog)
-        self.lineEdit_5.setGeometry(QtCore.QRect(60, 140, 341, 21))
-        self.lineEdit_5.setStyleSheet("QLineEdit {\n"
-"    background-color: #5c5b5b;\n"
-"    color: #ffffff;\n"
-"}")
-        self.lineEdit_5.setObjectName("lineEdit_5")
-        self.lineEdit_6 = QtWidgets.QLineEdit(Dialog)
-        self.lineEdit_6.setGeometry(QtCore.QRect(60, 170, 341, 21))
-        self.lineEdit_6.setStyleSheet("QLineEdit {\n"
-"    background-color: #5c5b5b;\n"
-"    color: #ffffff;\n"
-"}")
-        self.lineEdit_6.setObjectName("lineEdit_6")
-        self.lineEdit_7 = QtWidgets.QLineEdit(Dialog)
-        self.lineEdit_7.setGeometry(QtCore.QRect(420, 20, 191, 21))
-        self.lineEdit_7.setStyleSheet("QLineEdit {\n"
-"    background-color: #5c5b5b;\n"
-"    color: #ffffff;\n"
-"}")
-        self.lineEdit_7.setPlaceholderText("")
-        self.lineEdit_7.setObjectName("lineEdit_7")
-        self.lineEdit_8 = QtWidgets.QLineEdit(Dialog)
-        self.lineEdit_8.setGeometry(QtCore.QRect(420, 50, 191, 21))
-        self.lineEdit_8.setStyleSheet("QLineEdit {\n"
-"    background-color: #5c5b5b;\n"
-"    color: #ffffff;\n"
-"}")
-        self.lineEdit_8.setPlaceholderText("")
-        self.lineEdit_8.setObjectName("lineEdit_8")
-        self.lineEdit_9 = QtWidgets.QLineEdit(Dialog)
-        self.lineEdit_9.setGeometry(QtCore.QRect(420, 80, 191, 21))
-        self.lineEdit_9.setStyleSheet("QLineEdit {\n"
-"    background-color: #5c5b5b;\n"
-"    color: #ffffff;\n"
-"}")
-        self.lineEdit_9.setPlaceholderText("")
-        self.lineEdit_9.setObjectName("lineEdit_9")
-        self.lineEdit_10 = QtWidgets.QLineEdit(Dialog)
-        self.lineEdit_10.setGeometry(QtCore.QRect(420, 110, 191, 21))
-        self.lineEdit_10.setStyleSheet("QLineEdit {\n"
-"    background-color: #5c5b5b;\n"
-"    color: #ffffff;\n"
-"}")
-        self.lineEdit_10.setPlaceholderText("")
-        self.lineEdit_10.setObjectName("lineEdit_10")
-        self.lineEdit_11 = QtWidgets.QLineEdit(Dialog)
-        self.lineEdit_11.setGeometry(QtCore.QRect(420, 140, 191, 21))
-        self.lineEdit_11.setStyleSheet("QLineEdit {\n"
-"    background-color: #5c5b5b;\n"
-"    color: #ffffff;\n"
-"}")
-        self.lineEdit_11.setPlaceholderText("")
-        self.lineEdit_11.setObjectName("lineEdit_11")
-        self.lineEdit_12 = QtWidgets.QLineEdit(Dialog)
-        self.lineEdit_12.setGeometry(QtCore.QRect(420, 170, 191, 21))
-        self.lineEdit_12.setStyleSheet("QLineEdit {\n"
-"    background-color: #5c5b5b;\n"
-"    color: #ffffff;\n"
-"}")
-        self.lineEdit_12.setPlaceholderText("")
-        self.lineEdit_12.setObjectName("lineEdit_12")
+        self.progressBar.setProperty("value", 24)
+        self.progressBar.setObjectName("progressBar")
 
         self.retranslateUi(Dialog)
+        self.pushButton_2.clicked.connect(self.lineEdit_2.clear)
+        self.pushButton_2.clicked.connect(self.lineEdit_1.clear)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
 
     def retranslateUi(self, Dialog):
         _translate = QtCore.QCoreApplication.translate
         Dialog.setWindowTitle(_translate("Dialog", "Dialog"))
-        self.pushButton.setText(_translate("Dialog", "START"))
+        self.pushButton_1.setText(_translate("Dialog", "START"))
         self.pushButton_2.setText(_translate("Dialog", "RESET"))
-        self.toolButton.setText(_translate("Dialog", "..."))
+        self.toolButton_1.setText(_translate("Dialog", "..."))
+        self.lineEdit_1.setPlaceholderText(_translate("Dialog", "C:\\ путь к исходной папке"))
         self.toolButton_2.setText(_translate("Dialog", "..."))
-        self.toolButton_3.setText(_translate("Dialog", "..."))
-        self.lineEdit.setPlaceholderText(_translate("Dialog", "C:\\путь к фаулу"))
-        self.toolButton_4.setText(_translate("Dialog", "..."))
-        self.toolButton_5.setText(_translate("Dialog", "..."))
-        self.toolButton_6.setText(_translate("Dialog", "..."))
-        self.lineEdit_2.setPlaceholderText(_translate("Dialog", "C:\\путь к фаулу"))
-        self.lineEdit_3.setPlaceholderText(_translate("Dialog", "C:\\путь к фаулу"))
-        self.lineEdit_4.setPlaceholderText(_translate("Dialog", "C:\\путь к фаулу"))
-        self.lineEdit_5.setPlaceholderText(_translate("Dialog", "C:\\путь к фаулу"))
-        self.lineEdit_6.setPlaceholderText(_translate("Dialog", "C:\\путь к фаулу"))
+        self.lineEdit_2.setPlaceholderText(_translate("Dialog", "C:\\ путь к конечной папке"))
 
 
 if __name__ == "__main__":

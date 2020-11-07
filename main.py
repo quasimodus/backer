@@ -15,7 +15,7 @@ class CurrencyConv(QtWidgets.QDialog):
 
     def init_UI(self):
         self.setWindowTitle("backer_tool")
-        self.ui.toolButton.clicked.connect(self.get_puth)
+        self.ui.toolButton_1.clicked.connect(self.get_puth)
 
     def get_puth(self):
         # input_currency = self.ui.lineEdit.text()
@@ -23,7 +23,7 @@ class CurrencyConv(QtWidgets.QDialog):
         # p = check_ping(input_currency)
 
         wb_patch = QtWidgets.QFileDialog.getExistingDirectory()
-        self.ui.lineEdit.setText(wb_patch)
+        self.ui.lineEdit_1.setText(wb_patch)
         # print("Путь к файлу : " + wb_patch)
 
 
