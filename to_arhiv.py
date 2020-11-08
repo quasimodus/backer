@@ -1,22 +1,35 @@
+# coding:utf8
+# создание архива директории  с помощью модуля zipfile
+# --------------------------------------------------------------------
+
 import os
-import tkinter
-from PyQt5 import QtCore, QtGui, QtWidgets
+import time
+import zipfile
+import zlib
 
 
-def check_ping(hostname, status=None):
-    if not hostname:
-        status = 'Введите адрес хоста в поле слева'
-        return status
+def arhivator(source, target_dir):
+    # source = "C:\\TEST_1C\\1C\\"
+    #
+    # target_dir = 'E:\\BACKUP'  # Подставьте тот путь, который вы будете использовать.
 
-    else:
-        # hostname = "8.8.8.8"
-        response = os.system("ping -n 1 " + hostname)
+    if not os.path.exists(target_dir):
+        os.mkdir(target_dir)  # создание каталога
+        print('Каталог успешно создан', target_dir)
 
-        if response == 0:
-            print(hostname, ' - Хост доступен!')
-            status = hostname + ' -- доступен!'
-        else:
-            print(hostname, '  Хост не доступен!')
-            status = hostname + ' -- не доступен!'
+    today = target_dir + os.sep + time.strftime('%Y%m%d')
 
-        return status
+    now = time.strftime('%H%M%S')
+
+    target = today + os.sep + now + '.zip'
+
+    if not os.path.exists(today):
+        os.mkdir(today)  # создание каталога
+        print('Каталог успешно создан', today)
+    mode = zipfile.ZIP_DEFLATED
+    zipp = zipfile.ZipFile(target, 'w', mode)  # создание архива
+    for root, dirs, files in os.walk(source):  # получаем адрес каталога и имена подкатологов и файлов
+        for file in files:
+            zipp.write(os.path.join(root, file))  # пишем файлы в архив
+
+    zipp.close()
